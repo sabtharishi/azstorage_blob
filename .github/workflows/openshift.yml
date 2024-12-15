@@ -45,9 +45,9 @@ env:
 
   # 🖊️ EDIT to change the image registry settings.
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
-  IMAGE_REGISTRY: docker.io/srnathan
+  IMAGE_REGISTRY: docker.io
   IMAGE_REGISTRY_USER: srnathan
-  IMAGE_REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+  IMAGE_REGISTRY_PASSWORD: ${{ secrets.IMAGE_REGISTRY_PASSWORD }}
 
   # 🖊️ EDIT to specify custom tags for the container image, or default tags will be generated below.
   IMAGE_TAGS: ""
