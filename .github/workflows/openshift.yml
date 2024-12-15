@@ -158,7 +158,7 @@ jobs:
       with:
         path_context: '.'
         # Builder image for a java project
-        builder_image: 'registry.access.redhat.com/ubi9/openjdk-21:1.21-3.1733995526'
+        builder_image: 'fabric8/s2i-java'
         image: ${{ env.IMAGE_NAME }}
         tags: ${{ env.IMAGE_TAGS }}
  
