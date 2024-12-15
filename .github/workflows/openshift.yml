@@ -45,7 +45,7 @@ env:
 
   # 🖊️ EDIT to change the image registry settings.
   # Registries such as GHCR, Quay.io, and Docker Hub are supported.
-  IMAGE_REGISTRY: docker,in/srnathan
+  IMAGE_REGISTRY: docker.io/srnathan
   IMAGE_REGISTRY_USER: srnathan
   IMAGE_REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
 
@@ -153,7 +153,7 @@ jobs:
 
 
     - name: Setup and Build
-      id: build_image
+      id: build-image
       uses: redhat-actions/s2i-build@v2
       with:
         path_context: '.'
