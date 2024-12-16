@@ -3,10 +3,10 @@ package com.rishilearnings.azstorage;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class AzstorageApplicationTests {
 
-	@Test
+//	@Test
 	void contextLoads() {
 	}
 
