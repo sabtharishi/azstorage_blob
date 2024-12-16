@@ -3,10 +3,13 @@ package com.rishilearnings.azstorage;
 import com.azure.storage.blob.BlobContainerClient;
 import com.azure.storage.blob.BlobServiceClient;
 import com.azure.storage.blob.BlobServiceClientBuilder;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+
+@Slf4j
 @Configuration
 public class AzureConfiguration {
 
@@ -21,6 +24,7 @@ public class AzureConfiguration {
     @Bean
     public BlobServiceClient blobServiceClient() {
 
+         log.info("azureBlobConnectionString :: " + azureBlobConnectionString);
         return new BlobServiceClientBuilder()
                 .connectionString(azureBlobConnectionString)
                 .buildClient();
@@ -30,7 +34,7 @@ public class AzureConfiguration {
 
     @Bean
     public BlobContainerClient blobContainerClient() {
-
+        log.info("azureBlobContainerName :: " + azureBlobContainerName);
         return blobServiceClient().getBlobContainerClient(azureBlobContainerName);
 
 
